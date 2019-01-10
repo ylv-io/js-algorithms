@@ -1,7 +1,8 @@
 function merge(arr) {
   if (arr.length === 1) return arr;
-  const left = merge(arr.slice(0, arr.length / 2));
-  const right = merge(arr.slice(arr.length / 2, arr.length));
+  const mid = Math.floor(arr.length / 2);
+  const left = merge(arr.slice(0, mid));
+  const right = merge(arr.slice(mid));
   const result = [];
   let i = 0;
   let j = 0;
