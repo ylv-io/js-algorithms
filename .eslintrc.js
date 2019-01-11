@@ -24,5 +24,6 @@ module.exports = {
     "no-restricted-syntax": 0,
     "no-param-reassign": 0,
     "no-continue": 0,
+    "no-loop-func": 0,
   }
 };
