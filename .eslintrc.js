@@ -25,5 +25,6 @@ module.exports = {
     "no-param-reassign": 0,
     "no-continue": 0,
     "no-loop-func": 0,
+    "prefer-destructuring": 0,
   }
 };
