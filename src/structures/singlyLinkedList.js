@@ -141,3 +141,11 @@ console.log(list.set(3, '!!!'));
 console.log(list.get(3));
 console.log(list.shift());
 console.log(list.pop());
+
+
+const b = [1, 2, 3];
+const f = (a, ...b) => a + b;
+
+console.log(f(1));
+
+const result = 1 + [];
