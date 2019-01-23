@@ -133,10 +133,11 @@
 // let a = -1 ? 'foo' ? null : -1 : 1;
 // console.log(a);
 
-const data = [{a: true, b: false}, {a: false, b: true}];
-let result = false;
-let sample;
-while (sample = data.pop()) {
-  result = sample.a;
-}
-console.log(result);
+// const data = [{a: true, b: false}, {a: false, b: true}];
+// let result = false;
+// let sample;
+// while (sample = data.pop()) {
+//   result = sample.a;
+// }
+// console.log(result);
+
