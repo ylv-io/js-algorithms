@@ -47,6 +47,39 @@ class BinarySearchTree {
     }
     return data;
   }
+
+  preOrder() {
+    const data = [];
+    function traverse(node) {
+      if (node.left) traverse(node.left);
+      if (node.right) traverse(node.right);
+      data.push(node);
+    }
+    traverse(this.root);
+    return data;
+  }
+
+  postOrder() {
+    const data = [];
+    function traverse(node) {
+      data.push(node);
+      if (node.left) traverse(node.left);
+      if (node.right) traverse(node.right);
+    }
+    traverse(this.root);
+    return data;
+  }
+
+  inOrder() {
+    const data = [];
+    function traverse(node) {
+      if (node.left) traverse(node.left);
+      data.push(node);
+      if (node.right) traverse(node.right);
+    }
+    traverse(this.root);
+    return data;
+  }
 }
 
 const tree = new BinarySearchTree();
@@ -66,5 +99,6 @@ console.log(tree.find(1));
 console.log(tree.find(19));
 console.log(tree.find(20));
 console.log(tree.breadth());
+console.log(tree.preOrder());
 
 console.log(tree);
