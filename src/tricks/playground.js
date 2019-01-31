@@ -1,3 +1,7 @@
+function range(x, y) {
+  return Array(y - x + 1).fill(x).map((a, b) => { return a + b }).filter(i => i >= x);
+}
+
 // function aaa() {
 //   return
 //   {
@@ -268,3 +272,80 @@
 // console.log(solution([10]));
 // console.log(solution([4, 1, 3, 2]));
 // console.log(solution([4, 1, 3]));
+
+// function solution(x, arr) {
+//   if (!arr.length) return -1;
+//   const set = new Set();
+//   for (let i = 0; i < arr.length; i++) {
+//     set.add(arr[i]);
+//     if (set.size === x) return i;
+//   }
+//   return -1;
+// }
+
+// console.log(solution(0, []));
+// console.log(solution(1, [1]));
+// console.log(solution(5, [1, 3, 1, 4, 2, 3, 5, 4]));
+
+// function solution(arr) {
+//   const sorted = [...(new Set(arr.filter(o => o > 0)))].sort((a, b) => a - b);
+//   for (let i = 0; i < (sorted.length + 1); i++) {
+//     if ((i + 1) !== sorted[i]) return i + 1;
+//   }
+//   return 1;
+// }
+
+
+// console.log(solution([32424]));
+// console.log(solution([1, 3, 6, 4, 1, 2]));
+// console.log(solution([1, 2, 3]));
+// console.log(solution([-1, -3]));
+// console.log(solution([-1, -3, 1, 2, 3]));
+// console.log(solution([...range(1, 100), ...range(102, 200)]));
+
+// function solution(n, arr) {
+//   let max = 0;
+//   let debt = 0;
+//   let obj = {};
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] === (n + 1)) {
+//       debt += max;
+//       max = 0;
+//       obj = {};
+//     } else {
+//       const index = arr[i] - 1;
+//       if (!obj[index]) obj[index] = 1;
+//       else obj[index]++;
+//       max = Math.max(obj[index], max);
+//     }
+//   }
+
+//   const ret = (new Array(n)).fill(debt);
+//   Object.keys(obj).forEach((o) => {
+//     ret[o] += obj[o];
+//   });
+
+//   return ret;
+// }
+
+// console.log(solution(1, [1]));
+// console.log(solution(1, [2]));
+// console.log(solution(5, [3, 4, 4, 6, 1, 4, 4]));
+
+// function solution(arr) {
+//   let zeros = 0;
+//   let ret = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] === 0) zeros++;
+//     else {
+//       ret += zeros;
+//       if (ret > 1000000000) return -1;
+//     }
+//   }
+//   return ret;
+// }
+
+// console.log(solution([0]));
+// console.log(solution([1]));
+// console.log(solution([0, 1, 0, 1, 1]));
+// console.log(solution([0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1]));
