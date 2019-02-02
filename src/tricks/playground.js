@@ -349,3 +349,110 @@ function range(x, y) {
 // console.log(solution([1]));
 // console.log(solution([0, 1, 0, 1, 1]));
 // console.log(solution([0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1]));
+
+// function solution(S, P, Q) {
+//   let dna = '';
+//   const ans = [];
+
+//   for (let i = 0; i < P.length; i++) {
+//     dna = S.slice(P[i], Q[i] + 1);
+
+//     if (dna.indexOf('A') !== -1) {
+//       ans.push(1);
+//     } else if (dna.indexOf('C') !== -1) {
+//       ans.push(2);
+//     } else if (dna.indexOf('G') !== -1) {
+//       ans.push(3);
+//     } else {
+//       ans.push(4);
+//     }
+//   }
+//   return ans;
+// }
+
+// console.log(solution('AACCGGTT', [0, 3, 6], [2, 4, 7]));
+// console.log(solution('CAGCCTA', [2, 5, 0], [4, 5, 6]));
+
+// function solution(arr) {
+//   const sum = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     sum.push(arr[i] + (i > 0 ? sum[i - 1] : 0));
+//   }
+//   // console.log(sum);
+//   let min = Number.MAX_VALUE;
+//   let index = -1;
+//   for (let i = 0; i < arr.length; i++) {
+//     for (let j = i + 1; j < arr.length; j++) {
+//       const newMin = (sum[j] - (i > 0 ? sum[i - 1] : 0)) / (j - i + 1);
+//       if (newMin < min) {
+//         min = newMin;
+//         index = i;
+//       }
+//     }
+//   }
+//   return index;
+// }
+
+// console.log(solution([-1, -1, -1, 1]));
+// console.log(solution([-1, 1]));
+// console.log(solution([-1, 1, 1, 2, 3, 4]));
+// console.log(solution([1, 2]));
+// console.log(solution([4, 2, 2, 5, 1, 5, 8]));
+// console.log(solution([4, 2, 2, 5, 1, 5, 8, 1, 1]));
+
+// function solution(A, B, K) {
+//   return Math.floor(B / K) - Math.floor(A / K) + (A % K === 0 ? 1 : 0);
+// }
+
+// console.log(solution(0, 1, 11));
+// console.log(solution(1, 1, 11));
+// console.log(solution(11, 11, 11));
+// console.log(solution(0, 0, 11));
+// console.log(solution(6, 11, 2));
+// console.log(solution(0, 2000000000, 1));
+// console.log(solution(0, 2000000000, 2));
+// console.log(solution(0, 2000000000, 3));
+// console.log(solution(0, 2000000000, 11));
+// console.log(solution(0, 2000000000, 17));
+
+// function solution(arr) {
+//   return (new Set(arr)).size;
+// }
+
+// console.log(solution([2, 2, 1, 3, 1, 1]));
+
+// function solution(arr) {
+//   arr.sort((a, b) => a - b);
+//   const allPositive = arr.slice(arr.length - 3)
+//     .reduce((a, b) => a * b);
+//   const withNegative = arr[arr.length - 1] * arr[0] * arr[1];
+//   return allPositive > withNegative ? allPositive : withNegative;
+// }
+
+// console.log(solution([-3, 1, 2, -2, 5, 6]));
+// console.log(solution([-5, 5, -5, 4]));
+
+function solution(arr) {
+  arr.sort((a, b) => a - b);
+  for (let i = 0; i < arr.length - 2; i++) {
+    if ((arr[i] + arr[i + 1]) > arr[i + 2]) return 1;
+  }
+  return 0;
+}
+
+// 5 8 10
+// 2 3 4
+
+// x + y > z
+// x + z > y
+// y + z > x
+// 2x + 2y + 2z > x + y + z
+// 2x + y + z > z + y
+// 2x + y > y
+
+console.log(solution([]));
+console.log(solution([1]));
+console.log(solution([1, 2]));
+console.log(solution([1, 2, 3]));
+console.log(solution([10, 2, 5, 1, 8, 20]));
+console.log(solution([10, 50, 5, 1]));
