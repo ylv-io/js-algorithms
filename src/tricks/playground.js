@@ -432,27 +432,27 @@ function range(x, y) {
 // console.log(solution([-3, 1, 2, -2, 5, 6]));
 // console.log(solution([-5, 5, -5, 4]));
 
-function solution(arr) {
-  arr.sort((a, b) => a - b);
-  for (let i = 0; i < arr.length - 2; i++) {
-    if ((arr[i] + arr[i + 1]) > arr[i + 2]) return 1;
-  }
-  return 0;
-}
+// function solution(arr) {
+//   arr.sort((a, b) => a - b);
+//   for (let i = 0; i < arr.length - 2; i++) {
+//     if ((arr[i] + arr[i + 1]) > arr[i + 2]) return 1;
+//   }
+//   return 0;
+// }
 
-// 5 8 10
-// 2 3 4
+// // 5 8 10
+// // 2 3 4
 
-// x + y > z
-// x + z > y
-// y + z > x
-// 2x + 2y + 2z > x + y + z
-// 2x + y + z > z + y
-// 2x + y > y
+// // x + y > z
+// // x + z > y
+// // y + z > x
+// // 2x + 2y + 2z > x + y + z
+// // 2x + y + z > z + y
+// // 2x + y > y
 
-console.log(solution([]));
-console.log(solution([1]));
-console.log(solution([1, 2]));
-console.log(solution([1, 2, 3]));
-console.log(solution([10, 2, 5, 1, 8, 20]));
-console.log(solution([10, 50, 5, 1]));
+// console.log(solution([]));
+// console.log(solution([1]));
+// console.log(solution([1, 2]));
+// console.log(solution([1, 2, 3]));
+// console.log(solution([10, 2, 5, 1, 8, 20]));
+// console.log(solution([10, 50, 5, 1]));
