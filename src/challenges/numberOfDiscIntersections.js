@@ -1,5 +1,4 @@
 function solution(A) {
-  let i;
   let sum = 0;
   const len = A.length;
   const startArr = (new Array(len)).fill(0);
@@ -7,7 +6,7 @@ function solution(A) {
   let active = 0;
 
   // sort start and end boundaries of the discs into their own arrays
-  for (i = 0; i < len; i += 1) {
+  for (let i = 0; i < len; i += 1) {
     if (i < A[i]) startArr[0]++;
     else startArr[i - A[i]]++;
 
@@ -15,7 +14,7 @@ function solution(A) {
     else endArr[i + A[i]]++;
   }
 
-  for (i = 0; i < len; i++) {
+  for (let i = 0; i < len; i++) {
     sum += active * startArr[i] + (startArr[i] * (startArr[i] - 1)) / 2;
     // over 10 000 000 return -1 as stated in the assignment
     if (sum > 10000000) return -1;

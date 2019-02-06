@@ -1,6 +1,6 @@
-function range(x, y) {
-  return Array(y - x + 1).fill(x).map((a, b) => { return a + b }).filter(i => i >= x);
-}
+// function range(x, y) {
+//   return Array(y - x + 1).fill(x).map((a, b) => { return a + b }).filter(i => i >= x);
+// }
 
 // function aaa() {
 //   return
