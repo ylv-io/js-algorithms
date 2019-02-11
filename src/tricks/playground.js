@@ -456,3 +456,23 @@
 // console.log(solution([1, 2, 3]));
 // console.log(solution([10, 2, 5, 1, 8, 20]));
 // console.log(solution([10, 50, 5, 1]));
+
+// const a = {},
+//     b = {c:'b'},
+//     c = {b:'c'};
+
+// a[b] = 111;
+// a[c] = 333;
+
+// console.log(a[b]);
+
+// for (var i = 0; i < 5; i++) {
+// 	setTimeout(function() { console.log(i); }, i * 1000 );
+// }
+
+// for (let i = 0; i < 5; i++) {
+//   setTimeout(function() { console.log(i); }, i * 1000 );
+// }
+
+// console.log(1 < 2 < 2);
+// console.log(3 > 2 > 1);
