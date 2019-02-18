@@ -45,6 +45,23 @@
 // each element of array A is an integer within the range [−10,000..10,000].
 
 function solution(arr) {
+  const start = new Array(arr.length);
+  const end = new Array(arr.length);
+  let sum = 0;
+  let max = 0;
+  for (let i = 1; i < (arr.length - 2); i++) {
+    sum = Math.max(0, sum + arr[i]);
+    start[i] = sum;
+  }
+  sum = 0;
+  for (let i = (arr.length - 2); i > 1; i--) {
+    sum = Math.max(0, sum + arr[i]);
+    end[i] = sum;
+  }
+  for (let i = 1; i < (arr.length - 1); i++) {
+    max = Math.max(max, (start[i - 1] || 0) + (end[i + 1] || 0));
+  }
+  return max;
 }
 
 console.log(solution([3, 2, 6, -1, 4, 5, -1, 2]));
